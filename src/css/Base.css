@@ -1,0 +1,111 @@
+@import url(./Fonts.css);
+
+:root {
+  --color-dusty-rose: #c48a9e;
+  --color-deep-mauve: #8c5c70;
+  --color-blush-white: #fff7f2;
+  --color-soft-beige: #f3e4dc;
+
+  --color-primary: var(--color-dusty-rose);
+  --color-secondary: var(--color-deep-mauve);
+  --color-text: #2e2a28;
+  --color-page-background: var(--color-blush-white);
+
+  --font-size: 1rem;
+  --h1-size: 2.5rem;
+  --h2-size: 2rem;
+  --h3-size: 1.5rem;
+
+  --font-light: 400;
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-regular);
+  font-size: var(--font-size);
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-page-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  position: relative;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+/* no underline effect when images are wrapped in an a href tag */
+a:has(img)::before {
+  display: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair", sans-serif;
+  font-weight: var(--font-semi-bold);
+  color: var(--color-secondary);
+}
+
+h1 {
+  font-size: var(--h1-size);
+  line-height: 2.5rem;
+}
+
+h2 {
+  font-size: var(--h2-size);
+  line-height: 1.5rem;
+}
+
+h3 {
+  font-size: var(--h3-size);
+  line-height: 1.5rem;
+}
