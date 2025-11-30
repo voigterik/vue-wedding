@@ -1,6 +1,7 @@
 <script setup></script>
 <template>
-  <section id="travel" class="details">
+  <section class="details">
+    <div id="travel" class="anchor"></div>
     <h2>Travel & Accomodation</h2>
     <section class="travel">
       <h3>Travel</h3>
@@ -30,7 +31,6 @@
 <style scoped>
 .details {
   position: relative;
-  min-height: 100vh;
   padding: 2rem;
   text-align: center;
 }

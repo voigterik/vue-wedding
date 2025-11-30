@@ -2,7 +2,6 @@
 import { ref, onMounted, onUnmounted } from "vue";
 const isOpen = ref(false);
 const isFloating = ref(false);
-const isHidden = ref(false);
 
 function toggleMenu() {
   isOpen.value = !isOpen.value;
@@ -19,9 +18,8 @@ function handleResize() {
 }
 
 function moveHeader() {
-  window.scrollY > 70 && window.innerWidth > 768
-    ? (isFloating.value = true)
-    : (isFloating.value = false);
+  window.scrollY > 70 ? (isFloating.value = true) : (isFloating.value = false);
+  isOpen.value = false;
 }
 
 onMounted(() => {
@@ -31,6 +29,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener("resize", handleResize);
+  window.removeEventListener("scroll", moveHeader);
 });
 </script>
 <template>

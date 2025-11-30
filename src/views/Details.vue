@@ -1,6 +1,7 @@
 <script setup></script>
 <template>
-  <section id="details" class="details">
+  <section class="details">
+    <div id="details" class="anchor"></div>
     <h2>Details</h2>
     <section class="location">
       <h3>
@@ -34,33 +35,33 @@
         <div>
           <div class="person">
             <img src="../assets/images/profile.png" alt="" class="profile" />
-            <div>Lirum Larum</div>
+            <div>Jean Sibelius</div>
           </div>
           <div class="person">
             <img src="../assets/images/profile.png" alt="" class="profile" />
-            <div>Lirum Larum</div>
+            <div>Carl Gustaf Emil Mannerheim</div>
           </div>
           <div class="person">
             <img src="../assets/images/profile.png" alt="" class="profile" />
-            <div>Lirum Larum</div>
+            <div>Kimi Räikkönen</div>
           </div>
         </div>
         <div>
           <div class="person">
             <img src="../assets/images/profile.png" alt="" class="profile" />
-            <div>Lirum Larum</div>
+            <div>Frida Kahlo</div>
           </div>
           <div class="person">
             <img src="../assets/images/profile.png" alt="" class="profile" />
-            <div>Lirum Larum</div>
+            <div>Salma Hayek</div>
           </div>
           <div class="person">
             <img src="../assets/images/profile.png" alt="" class="profile" />
-            <div>Lirum Larum</div>
+            <div>Ellen Ochoa</div>
           </div>
           <div class="person">
             <img src="../assets/images/profile.png" alt="" class="profile" />
-            <div>Lirum Larum</div>
+            <div>Thalia</div>
           </div>
         </div>
       </div>
@@ -81,7 +82,6 @@
 <style scoped>
 .details {
   position: relative;
-  min-height: 100vh;
   padding: 2rem;
   text-align: center;
   background: var(--color-soft-beige);
@@ -100,9 +100,11 @@ p + h3 {
 }
 
 .team {
+  max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
+  justify-self: center;
   margin: 3rem 0 0 0;
 }
 

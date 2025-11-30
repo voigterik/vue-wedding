@@ -1,6 +1,7 @@
 <script setup></script>
 <template>
-  <section id="faq" class="details">
+  <section class="details">
+    <div id="faq" class="anchor"></div>
     <h2>Frequently asked questions</h2>
     <section class="travel">
       <h3>Sicut malus movie horror.</h3>
@@ -30,7 +31,6 @@
 <style scoped>
 .details {
   position: relative;
-  min-height: 100vh;
   padding: 2rem;
   text-align: center;
   background: var(--color-soft-beige);

@@ -1,6 +1,7 @@
 <script setup></script>
 <template>
-  <section id="journey" class="journey">
+  <section class="journey">
+    <div id="journey" class="anchor"></div>
     <h2>Our Journey</h2>
     <section class="photos">
       <div class="polaroid">
@@ -9,11 +10,19 @@
       </div>
       <div class="polaroid">
         <img src="https://placehold.co/300x300" alt="Photo 2" />
-        <p>The proposal</p>
+        <p>Travelling in Mexico</p>
       </div>
       <div class="polaroid">
         <img src="https://placehold.co/300x300" alt="Photo 3" />
+        <p>Life in Finland</p>
+      </div>
+      <div class="polaroid">
+        <img src="https://placehold.co/300x300" alt="Photo 1" />
         <p>Happy together</p>
+      </div>
+      <div class="polaroid">
+        <img src="https://placehold.co/300x300" alt="Photo 2" />
+        <p>The proposal</p>
       </div>
     </section>
   </section>
@@ -22,7 +31,6 @@
 <style scoped>
 .journey {
   position: relative;
-  min-height: 100vh;
   padding: 2rem 2rem 3rem 2rem;
 }
 

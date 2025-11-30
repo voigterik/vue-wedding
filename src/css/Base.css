@@ -109,3 +109,9 @@ h3 {
   font-size: var(--h3-size);
   line-height: 1.5rem;
 }
+
+.anchor {
+  position: absolute;
+  top: -60px;
+  z-index: 1;
+}

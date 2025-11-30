@@ -32,18 +32,17 @@ watch(
 );
 
 function handleSubmit() {
-  console.log("Form submitted:", formData.value);
+  // console.log("Form submitted:", formData.value);
   submitted.value = true;
 }
 </script>
 
 <template>
-  <section id="rsvp" class="rsvp">
+  <section class="rsvp">
+    <div id="rsvp" class="anchor"></div>
     <h2>RSVP</h2>
-
     <div v-if="!submitted" class="form-container">
       <p>Please let us know if you can make it to our special day!</p>
-
       <form @submit.prevent="handleSubmit">
         <div class="form-group">
           <label for="name">Full Name *</label>
@@ -55,7 +54,6 @@ function handleSubmit() {
             placeholder="John & Jane Doe"
           />
         </div>
-
         <div class="form-group">
           <label for="email">Email *</label>
           <input
@@ -66,7 +64,6 @@ function handleSubmit() {
             placeholder="your@email.com"
           />
         </div>
-
         <div class="form-group">
           <label>Will you be attending? *</label>
           <div class="radio-group">
@@ -92,7 +89,6 @@ function handleSubmit() {
             </label>
           </div>
         </div>
-
         <div v-if="formData.attending" class="form-group">
           <label for="guests">Number of Guests *</label>
           <input
@@ -104,7 +100,6 @@ function handleSubmit() {
             required
           />
         </div>
-
         <div v-if="formData.attending && formData.guests > 0" class="form-group">
           <label>Guest Names *</label>
           <div class="guest-names">
@@ -119,7 +114,6 @@ function handleSubmit() {
             />
           </div>
         </div>
-
         <div v-if="formData.attending" class="form-group">
           <label for="dietary">Dietary Restrictions</label>
           <input
@@ -129,7 +123,6 @@ function handleSubmit() {
             placeholder="Vegetarian, allergies, etc."
           />
         </div>
-
         <div class="form-group">
           <label for="message">Message (optional)</label>
           <textarea
@@ -139,11 +132,9 @@ function handleSubmit() {
             placeholder="Share your thoughts or special requests..."
           ></textarea>
         </div>
-
         <button type="submit" class="submit-btn">Submit RSVP</button>
       </form>
     </div>
-
     <div v-else class="thank-you">
       <h3>Thank You!</h3>
       <p v-if="formData.attending">We're so excited to celebrate with you! 🎉</p>
@@ -155,10 +146,8 @@ function handleSubmit() {
 <style scoped>
 .rsvp {
   position: relative;
-  min-height: 100vh;
   padding: 2rem;
   text-align: center;
-  background: var(--color-soft-beige);
 }
 
 h2 {
